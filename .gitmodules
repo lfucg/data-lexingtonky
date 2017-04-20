@@ -1,3 +1,3 @@
 [submodule "chef-lfucg"]
 	path = chef-lfucg
-	url = git@bitbucket.org:apaxsoftware/chef-lfucg.git
+	url = git@github.com:lfucg/chef-lfucg.git
