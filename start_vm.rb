@@ -9,7 +9,7 @@ sleep(1)
 system "echo", "-e", "\rInitializing cookbook submodule ...     [DONE]\033[K"
 
 def random_string(length=10)
-  chars = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)"
+  chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+"
   str = ''
   length.times { str << chars[rand(chars.size)] }
   str
