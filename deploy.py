@@ -129,7 +129,7 @@ def build_and_deploy_cookbook(cookbook):
         print('Gathering cookbook together into: ' + cookbookDir)
         FNULL = open(os.devnull, 'w')
         # Grab all the dependencies and put them in berks-cookbooks
-        subprocess.check_call(['berks', 'vendor'],
+        subprocess.check_call(['berks', 'vendor', '-q'],
             stdout=sys.stdout,  # XXX for debugging
             stderr=subprocess.STDOUT,
             cwd=cookbookDir
