@@ -2,4 +2,4 @@ deployment:
   dev:
     branch: dream
     commands:
-      - ./home/ubuntu/lfucg-deploy/bin/python deploy.py --stack-ids=b7965c5e-e5db-4af4-b370-01e04c1970f1
+      - ./deploy.sh --stack-ids=b7965c5e-e5db-4af4-b370-01e04c1970f1
