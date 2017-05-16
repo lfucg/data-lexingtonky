@@ -1,0 +1,45 @@
+{% ckan_extends %}
+<html xmlns:py="http://genshi.edgewall.org/"
+  xmlns:i18n="http://genshi.edgewall.org/i18n"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  py:strip=""
+  >
+
+  <py:def function="body_class">${h.literal('no-sidebar')}</py:def>
+
+  <py:def function="page_title">LexingtonKy.gov</py:def>
+
+  <div py:match="//div[@id='content']" class="front-page">
+    <div>
+        <div>
+            <h1 class="red">HELLO WORLD</h1>
+        </div>
+      <h1 class="page_heading">{{g.site_title}}</h1>
+      <p class="welcome">Welcome to Lexington’s open data portal, a collaborative effort between <a href="http://www.lexingtonky.gov">LFUCG</a> and the community. Our mission is to promote the openness, transparency and accountability of local government by providing high-value government data in standards compliant, machine readable format. This will serve as the basis for the creation of useful civic applications by third party developers.</p>
+      <p class="welcome">Address Points are now available!  Lexington is the first city in Kentucky to freely release its complete address point dataset.  The GIS layer includes point and address information for approximately 175,000 unique locations.  It is the repository for all addresses within Fayette County. The new data layer is located within the &quot;<a href="group/community">Community</a>&quot; category.</p>
+      <p class="welcome">In continuing our partnership with Fayette County Public Schools, we plan to offer their new school district boundaries once they are approved and available for public release.</p>
+      <p class="welcome">We will continue to expand our data catalog and offerings to build on the foundation we have established.</p>
+    </div>
+    <div class="row">
+    </div>
+    <div py:if="c.groups" class="row whoelse">
+      <div class="span12">
+        <h2>Data Categories</h2>
+        <p><a href="{[h.url_for(controller='package', action='search')]}">{{c.package_count}} datasets</a> available in ${h.nav_named_link(_('6 categories'), name='%s_index' % h.default_group_type() )}</p>
+      </div>
+    </div>
+    <div class="row">
+      <py:for each="i, group_dict in enumerate(c.groups[:6])">
+        <div class="span4">
+          <div class="group">
+            <h3><a href="${h.url_for(controller='group', action='read', id=group_dict['name'])}">${group_dict['title']}</a>: ${group_dict['packages']} datasets</h3>
+            <p>
+              ${h.markdown_extract(group_dict['description'])}
+            </p>
+          </div>
+        </div>
+      </py:for>
+    </div>
+  </div>
+  <xi:include href="layout.html" />
+</html>
