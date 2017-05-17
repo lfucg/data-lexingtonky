@@ -1,17 +1,11 @@
-{% ckan_extends %}
-
-{% block featured_group %}
-
-  {{ h.recently_changed_packages_activity_stream(limit=4) }}
-
-{% endblock %}
-
-{% block featured_organization %}
-
-  <h3>Most popular groups</h3>
-
-  {# Call the group_list.html snippet. #}
-  {% snippet 'group/snippets/group_list.html',
-             groups=h.ckantwo_theme_most_popular_groups() %}
-
-{% endblock %}
+<div role="main" style="background-color: #fff">
+  <div class="container">
+    <div>
+      <div>
+        {% block promoted %}
+          {% snippet 'home/snippets/promoted.html' %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+</div>
