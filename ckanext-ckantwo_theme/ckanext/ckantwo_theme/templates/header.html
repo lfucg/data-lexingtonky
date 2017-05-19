@@ -1,10 +1,8 @@
 {% block header_wrapper %}
 {% block header_account %}
-  <header class="account-masthead" style="background-color: #fff">
-    <div class="container" style="height: 100px">
-      <a class="media-image" href="#">
-        <img src="/lexington-logo.jpg" height="3em" style="background: left center"/>
-      </a>
+  <header class="account-masthead">
+    <div class="container">
+      <img class="logo" src="/lexington-logo.jpg"/>
       {% block header_account_container_content %}
         {% if c.userobj %}
           <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
@@ -56,9 +54,9 @@
           <nav class="account not-authed">
             <ul class="unstyled">
               {% block header_account_notlogged %}
-              <li>{% link_for _('Log in'), controller='user', action='login' %}</li>
+              <li class="unstyled">{% link_for _('Log in'), controller='user', action='login' %}</li>
               {% if h.check_access('user_create') %}
-                <li>{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
+                <li class="unstyled">{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
               {% endif %}
               {% endblock %}
             </ul>
@@ -72,7 +70,7 @@
   <img src="/lexington-hero-interior.jpg" alt="Featured image"
        width="100%" height="220" />
 </a>
-<header class="navbar navbar-static-top masthead" style="background-color: #f1f0f0">
+<header class="navbar navbar-static-top masthead">
   {% block header_debug %}
     {% if g.debug and not g.debug_supress_header %}
       <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
@@ -106,7 +104,7 @@
         <form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
           <div class="field">
             <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>
-            <input id="field-sitewide-search" type="text" name="q" placeholder="{{ _('Search For...') }}" />
+            <input id="field-sitewide-search" type="text" name="q" placeholder="{{ _('Search for...') }}" />
             <button class="btn-search" type="submit"><i class="icon-search"></i></button>
           </div>
         </form>
