@@ -2,20 +2,48 @@
   <div class="container">
     {% block footer_content %}
     <div class="row">
-      <div class="span8 footer-links">
-        {% block footer_nav %}
-          <ul class="unstyled">
-            {% block footer_links %}
-              <li><a href="{{ h.url_for(controller='home', action='about') }}">{{ _('About {0}').format(g.site_title) }}</a></li>
-            {% endblock %}
-          </ul>
-        {% endblock %}
-      </div>
-      <div class="span4 attribution">
-        {% block footer_lang %}
-          {% snippet "snippets/language_selector.html" %}
-        {% endblock %}
-      </div>
+        <div class="span6 footer-links">
+            <h2>lexington.gov</h2>
+            <ul class="usa-unstyled-list">
+                <li><a href="https://www.lexingtonky.gov/browse/community-services" target="_blank">Community services</a></li>
+                <li><a href="https://www.lexingtonky.gov/browse/government" target="_blank">Government</a></li>
+                <li><a href="https://www.lexingtonky.gov/browse/utilities-and-streets" target="_blank">Infrastructure and streets</a></li>
+                <li><a href="https://www.lexingtonky.gov/browse/jobs-and-contracts" target="_blank">Jobs and contracts</a></li>
+                <li><a href="https://www.lexingtonky.gov/browse/licensing-and-permits" target="_blank">Licensing, permits and development</a></li>
+                <li><a href="https://www.lexingtonky.gov/browse/neighborhoods-housing" target="_blank">Neighborhoods and housing</a></li>
+                <li><a href="https://www.lexingtonky.gov/browse/public-safety" target="_blank">Public safety</a></li>
+                <li><a href="https://www.lexingtonky.gov/browse/recreation" target="_blank">Recreation</a></li>
+            </ul>
+        </div>
+        <div class="span5 footer-links">
+            <h2>Services</h2>
+            <ul class="usa-unstyled-list">
+                <li><a href="https://www.lexingtonky.gov/lexcall" target="_blank">LexCall 311</a></li>
+                <li><a href="https://www.lexingtonky.gov/list-of-all-city-parks" target="_blank">Find a park</a></li>
+                <li><a href="https://www.lexingtonky.gov/traffic-ticker" target="_blank">Traffic updates</a></li>
+                <li><a href="https://www.lexingtonky.gov/browse/utilities-and-streets/waste-management" target="_blank">Trash & recycling</a></li>
+                <li><a href="https://www.lexingtonky.gov/contact/page_feedback" target="_blank">Contact</a></li>
+                <li><a href="https://www.lexingtonky.gov/departments/gtv3" target="_blank">GTV3</a></li>
+                <li><a href="http://data.lexingtonky.gov/" target="_blank">Open data</a></li>
+                <li><a href="https://www.lexingtonky.gov/lfucg-employees" target="_blank">Employees</a></li>
+                <li><a href="https://www.lexingtonky.gov/user/login" target="_blank">Staff login</a></li>
+                <li><a href="https://www.lexingtonky.gov/departments/geographic-information-services" target="_blank">Maps</a></li>
+            </ul>
+        </div>
+        <div class="span3 footer-links">
+            <h2>Get in touch</h2>
+            <ul class="usa-unstyled-list">
+                <li><a href="https://www.google.com/maps/dir//200+E.%20Main%20St.+40507+Lexington+KY" target="_blank">200 E Main St. Lexington, KY 40507</a></li>
+                <li>(859) 425-2255</li>
+            </ul>
+        </div>
+        <section class="span10">
+            <ul class="usa-unstyled-list">
+              <li>© 2017 Lexington-Fayette Urban County Government</li>
+              <li>Lexington KY, Horse Capital of the World <sup>®</sup></li>
+              <li><a href="https://www.lexingtonky.gov/terms-of-use" target="_blank">Terms of use</a></li>
+            </ul>
+        </section>
     </div>
     {% endblock %}
   </div>

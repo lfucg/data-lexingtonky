@@ -50,3 +50,32 @@ body {
 .navbar-static-top {
     margin: 0;
 }
+
+.footer-links h2 {
+    text-transform: uppercase;
+    color: #E0B111;
+    font-size: 1.8em;
+    font-weight: normal;
+    margin: 1em 0 .5em 0;
+    line-height: 1.1;
+}
+
+.usa-unstyled-list {
+    list-style: none;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.usa-unstyled-list li {
+    margin-bottom: 0;
+    line-height: 1.5;
+    max-width: 80em;
+}
+
+body>footer a, body>footer a:visited {
+    color: #bfbfbf;
+}
+
+footer a:visited {
+    color: #3787BA;
+}
