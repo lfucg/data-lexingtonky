@@ -1,5 +1,4 @@
 <footer class="site-footer">
-  <div class="container">
     {% block footer_content %}
     <div class="row">
         <div class="span6 footer-links">
@@ -46,11 +45,10 @@
         </section>
     </div>
     {% endblock %}
-  </div>
 
-  {% block footer_debug %}
-    {% if g.debug %}
-      {% include 'snippets/debug.html' %}
-    {% endif %}
-  {% endblock %}
+    {% block footer_debug %}
+        {% if g.debug %}
+            {% include 'snippets/debug.html' %}
+        {% endif %}
+    {% endblock %}
 </footer>
