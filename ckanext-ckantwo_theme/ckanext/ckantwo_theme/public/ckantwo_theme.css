@@ -1,19 +1,74 @@
-.logo {
-    width: 305px;
+/* containers */
+.container {
+    width: 90%;
 }
 
-.container {
-    margin: 20px 73px;
-    width: 80%;
+.container div {
+    display: inline-block;
+    margin-top: 20px;
 }
+
+/* Search Bar */
+.search-container {
+    margin-right: 20px;
+    margin-top: 0px;
+    width: 30%;
+}
+
+.search-container form div.field {
+    margin: 0;
+    width: 100%;
+}
+
+.auth-container, .search-container{
+    position: relative;
+    float: right;
+}
+
+/* If max-width is less than 568px */
+@media (max-width: 568px) {
+
+    .logo-container {
+        margin-left: auto;
+    }
+
+    .search-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
 
 header.account-masthead {
     height: 100px;
     background-color: #fff;
 }
 
+.account-masthead .account {
+    float: left;
+}
+
+.site-search {
+    line-height: 59px;
+    width: 100%;
+}
+
 .masthead {
     background-color: #f1f0f0;
+}
+
+.masthead .nav-collapse {
+    float: left;
+}
+
+.nav-tabs>li, .nav-pills>li {
+    position: relative;
+    left: 25px;
+}
+
+.navbar .nav>li>a {
+    padding: 17px 2px 10px;
+    color: #585858;
 }
 
 .masthead .container {
@@ -30,10 +85,6 @@ header.account-masthead {
     line-height: 59px;
 }
 
-.navbar .nav > li > a {
-    color: #585858;
-}
-
 body {
     padding: 0px;
     background-color: #fff;
@@ -41,6 +92,10 @@ body {
 
 .site-footer {
     background: #001A49;
+}
+
+.row {
+    margin-left: 20px;
 }
 
 .site-footer a {
@@ -78,4 +133,55 @@ body>footer a, body>footer a:visited {
 
 footer a:visited {
     color: #3787BA;
+}
+
+/* hide a tag style */
+a.disabled {
+   pointer-events: none;
+   cursor: default;
+}
+
+.masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li.active a {
+    background-color: inherit;
+    color: #3787BA;
+}
+
+@media screen and (min-width: 901px) {
+    .logo {
+        width: 305px;
+    }
+}
+
+@media (max-width: 900px) {
+    .logo {
+        width: 200px;
+    }
+}
+
+@media (max-width: 613px) {
+    .search-container {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    .logo-container {
+        position: relative;
+        width: 60%;
+        left: 20%;
+    }
+    .logo {
+        position: relative;
+        left: 10%;
+        width: 80%;
+    }
+
+    .auth-container {
+        width: 20%;
+    }
+
+    .account-masthead .account ul li a {
+        font-size: 8px;
+        line-height: 40px;
+        padding: 0px 2px 0px 0px;
+    }
 }
