@@ -1,7 +1,7 @@
 <footer class="site-footer">
     {% block footer_content %}
     <div class="row">
-        <div class="span6 footer-links">
+        <div class="footer-links">
             <h2>lexington.gov</h2>
             <ul class="usa-unstyled-list">
                 <li><a href="https://www.lexingtonky.gov/browse/community-services" target="_blank">Community services</a></li>
@@ -14,7 +14,7 @@
                 <li><a href="https://www.lexingtonky.gov/browse/recreation" target="_blank">Recreation</a></li>
             </ul>
         </div>
-        <div class="span5 footer-links">
+        <div class="footer-links">
             <h2>Services</h2>
             <ul class="usa-unstyled-list">
                 <li><a href="https://www.lexingtonky.gov/lexcall" target="_blank">LexCall 311</a></li>
@@ -29,20 +29,25 @@
                 <li><a href="https://www.lexingtonky.gov/departments/geographic-information-services" target="_blank">Maps</a></li>
             </ul>
         </div>
-        <div class="span3 footer-links">
+        <div class="footer-links">
             <h2>Get in touch</h2>
             <ul class="usa-unstyled-list">
                 <li><a href="https://www.google.com/maps/dir//200+E.%20Main%20St.+40507+Lexington+KY" target="_blank">200 E Main St. Lexington, KY 40507</a></li>
                 <li>(859) 425-2255</li>
             </ul>
         </div>
-        <section class="span10">
-            <ul class="usa-unstyled-list">
-              <li>© 2017 Lexington-Fayette Urban County Government</li>
-              <li>Lexington KY, Horse Capital of the World <sup>®</sup></li>
-              <li><a href="https://www.lexingtonky.gov/terms-of-use" target="_blank">Terms of use</a></li>
-            </ul>
-        </section>
+        <div class="lexington-footer">
+            <div class="seal-container">
+                <img class="seal" src="/lexington-seal.png"/>
+            </div>
+            <div>
+                <ul class="usa-unstyled-list">
+                  <li>© 2017 Lexington-Fayette Urban County Government</li>
+                  <li>Lexington KY, Horse Capital of the World <sup>®</sup></li>
+                  <li><a href="https://www.lexingtonky.gov/terms-of-use" target="_blank">Terms of use</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
     {% endblock %}
 

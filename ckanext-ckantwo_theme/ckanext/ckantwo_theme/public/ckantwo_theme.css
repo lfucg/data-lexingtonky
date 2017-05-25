@@ -44,6 +44,13 @@ header.account-masthead {
     background-color: #fff;
 }
 
+@media (max-width: 767px) {
+    .account-masthead {
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
 .account-masthead .account {
     float: left;
 }
@@ -104,6 +111,18 @@ body {
 
 .navbar-static-top {
     margin: 0;
+}
+
+.footer-links {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+}
+
+@media (max-width: 760px) {
+    .footer-links {
+        width: 100%;
+    }
 }
 
 .footer-links h2 {
@@ -184,4 +203,16 @@ a.disabled {
         line-height: 40px;
         padding: 0px 2px 0px 0px;
     }
+}
+
+/* Lexington seal and terms of use */
+.seal {
+    max-width: 80px;
+}
+
+.lexington-footer div {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-top: 10px;
+    margin-right: 10px;
 }
