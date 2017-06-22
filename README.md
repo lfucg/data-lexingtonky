@@ -51,3 +51,19 @@ Quit the server with CONTROL-C.
 ```
 
 View your site on `localhost:8000`!
+
+
+### Creating a user
+To create a user, simply run:
+
+```bash
+$ source env/bin/activate
+(env) $ cd cd data-lexingtonky/lfucg-ckan/
+(env) $ paster --plugin=ckan user add admin email=admin@apaxsoftware.com -c config.ini
+```
+
+To make a user an admin, run:
+
+```bash
+(env) $ paster --plugin=ckan sysadmin add admin -c config.ini
+```sysadmin add admin -c config.ini
