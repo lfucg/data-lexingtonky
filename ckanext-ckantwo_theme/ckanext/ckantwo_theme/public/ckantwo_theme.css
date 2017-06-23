@@ -217,6 +217,6 @@ a.disabled {
     margin-right: 10px;
 }
 
-.toolbar {
-    display: inline !important;
+#content div {
+    display: inherit;
 }

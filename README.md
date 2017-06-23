@@ -66,4 +66,4 @@ To make a user an admin, run:
 
 ```bash
 (env) $ paster --plugin=ckan sysadmin add admin -c config.ini
-```sysadmin add admin -c config.ini
+```
