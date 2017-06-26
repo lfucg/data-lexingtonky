@@ -223,7 +223,13 @@ a.disabled {
 
 .primary {
     display: inline-block !important;
-    float: none !important;
+    width: 75% !important;
+}
+
+@media (min-width: 768px) {
+    .span9 .page-header {
+        margin-left: 0;
+    }
 }
 
 .media-grid {
