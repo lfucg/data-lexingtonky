@@ -4,6 +4,6 @@ machine:
 
 deployment:
   dev:
-    branch: dream
+    branch: dev
     commands:
       - ./deploy.sh --stack-ids=b7965c5e-e5db-4af4-b370-01e04c1970f1
