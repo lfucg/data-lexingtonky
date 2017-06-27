@@ -3,6 +3,10 @@ machine:
     version: 2.2.2
 
 deployment:
+  master:
+    branch: master
+    commands:
+      - ./deploy.sh --stack-ids=0ac57f92-77b4-46ca-9e8c-b9a2b9f2936b
   dev:
     branch: dev
     commands:
